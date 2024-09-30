@@ -7,6 +7,7 @@ hamMenu.addEventListener("click", () => {
     offMenu.classList.toggle("active");
 });
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.count');
     

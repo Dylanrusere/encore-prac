@@ -24,43 +24,50 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
-               <div class="top_contact_container">
+                <div class="top_contact_container">
                     <a href="tel:(+263) 776 204 355" class="top_number"><i class="fa-solid fa-phone"></i> ZW:(+263) 776 204 355 / MW: (+265) 88 841 9993</a>
-                    <a href="malito:info@encorebusiness.solutions" class="top_email"><i class="fa-solid fa-envelope"></i> info@encorebusiness.solutions</a>
+                    <a href="mailto:info@encorebusiness.solutions" class="top_email"><i class="fa-solid fa-envelope"></i> info@encorebusiness.solutions</a>
                 </div>
             </div>
         </div>
         <div class="header_div">
-            <div class="logo"><a href="./index.html"><img class="logo_img" src="./assets/images/encore-business-solutions-logo.png" alt="Our Logo"></a></div>
-                <ul class="main_nav">
-                    <li><a href="./index.html" class="active_nav">Home</a></li>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./services.html">Our Services</a></li>
-                    <li><a href="./contact.html">Contacts</a></li>
+            <div class="logo">
+                <a href="./index.html"><img class="logo_img" src="./assets/images/encore-business-solutions-logo.png" alt="Our Logo"></a>
+            </div>
+            <ul class="main_nav">
+                <li><a href="./index.html" class="active_nav">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Our Services</a></li>
+                <li><a href="./contact.html">Contacts</a></li>
+            </ul>
+            <!-- Off Screen Menu -->
+            <div class="offScreenMenu">
+                <ul>
+                    <li><a href="./index.html" class="active_nav_ham">Home</a></li>
+                    &nbsp;
+                    <li><a href="./about.html">About</a></li>
+                    &nbsp;
+                    <li><a href="./services.html">Services</a></li>
+                    &nbsp;
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
-                <!-- Off Screen Menu -->
-                 <div class="offScreenMenu">
-                    <ul>
-                        <li><a href="./index.html" class="active_nav_ham">Home</a></li>
-                        &nbsp;
-                        <li><a href="./about.html">About</a></li>
-                        &nbsp;
-                        <li><a href="./services.html">Services</a></li>
-                        &nbsp;
-                        <li><a href="./contact.html">Contact</a></li>
-                    </ul>
-                 </div>
-                 <div class="menu_icons">
-                     <i class="fa-solid fa-magnifying-glass"></i>
-                 </div>
-                <!-- Ham Menu Icon-->
-                <div class="menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            </div>
+            <div class="menu_icons">
+                <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            </div>
+            <!-- Search Input -->
+            <div class="search_box" id="searchBox">
+                <input type="text" placeholder="Search...">
+            </div>
+            <!-- Ham Menu Icon-->
+            <div class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
+    
 
     <!-- Hero Section -->
      <section id="hero_section">
@@ -348,5 +355,15 @@
             
         });
 </script>
+<script>
+    // Toggle search box visibility on click
+    const searchIcon = document.getElementById('searchIcon');
+    const searchBox = document.getElementById('searchBox');
+
+    searchIcon.addEventListener('click', () => {
+        searchBox.classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>
