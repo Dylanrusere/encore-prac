@@ -155,7 +155,23 @@ header .main_nav li a:hover{
     }
 }
 
-/* Search Box */
+
+
+/* Close Search (X Icon) */
+.close_search {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close_search:hover {
+    color: #000;
+}
+
 .search_box {
     position: absolute;
     top: 60px;
@@ -166,10 +182,11 @@ header .main_nav li a:hover{
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px; /* Adjusted to accommodate the X icon */
 }
 
 .search_box input {
-    width: 200px;
+    width: 180px;
     padding: 8px;
     border: none;
     outline: none;
@@ -180,6 +197,7 @@ header .main_nav li a:hover{
 .search_box.active {
     display: block;
 }
+
 
 
 /* Sticky NavBar */

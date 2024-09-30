@@ -58,7 +58,9 @@
             <!-- Search Input -->
             <div class="search_box" id="searchBox">
                 <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-xmark close_search" id="closeSearch"></i>
             </div>
+
             <!-- Ham Menu Icon-->
             <div class="menu">
                 <span></span>
@@ -356,14 +358,21 @@
         });
 </script>
 <script>
-    // Toggle search box visibility on click
+    // Toggle search box visibility on click of search icon
     const searchIcon = document.getElementById('searchIcon');
     const searchBox = document.getElementById('searchBox');
+    const closeSearch = document.getElementById('closeSearch');
 
     searchIcon.addEventListener('click', () => {
         searchBox.classList.toggle('active');
     });
+
+    // Close search box on click of the "X" icon
+    closeSearch.addEventListener('click', () => {
+        searchBox.classList.remove('active');
+    });
 </script>
+
 
 </body>
 </html>
